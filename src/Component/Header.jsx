@@ -7,6 +7,7 @@ import night from "../../src/assets/night.png";
 import profileuser from "../../src/assets/profileuser.png";
 import "../../src/Component/MiddleSection/CommentSection.css";
 import ThemeContext from "./store/theme-context";
+import lightprofile from "../assets/lightprofile.webp";
 const Header = () => {
     function classNames(...args) {
         return args.filter(Boolean).join(" ");
@@ -46,19 +47,18 @@ const Header = () => {
                         style={{
                             padding: "0px",
                         }}
-                        className={classNames(
-                            "post-comment-button",
-                            ctx.isDark && "button-background"
-                        )}
+                        className={classNames("post-comment-button")}
                     >
-                        <img
+                        <i
+                            class="ri-notification-2-fill"
                             style={{
                                 width: "20px",
                                 height: "20px",
                                 margin: "5px",
+                                color: `${ctx.isDark?"#f2f2ed":"black"}`,
+                                
                             }}
-                            src={lightnotification}
-                        />
+                        ></i>
                     </button>
 
                     <button
@@ -83,9 +83,11 @@ const Header = () => {
                         style={{
                             width: "35px",
                             height: "35px",
-                            margin: "5px",
+                            margin: "0px",
+                            borderRadius: "50%",
+                            border: "1px solid grey",
                         }}
-                        src={profileuser}
+                        src={ctx.isDark ? lightprofile : profileuser}
                     />
                 </div>
             </div>
