@@ -88,8 +88,9 @@ const MiddleSection = () => {
             <div
                 style={{
                     overflow: "scroll",
-                    height:"80%",
-                    padding: "10px",
+                    height:"75%",
+                    // border:"2px solid white",
+                    // padding: "10px",
                     marginTop: ".5rem ",
                     scroll :"smooth",
                 }}
