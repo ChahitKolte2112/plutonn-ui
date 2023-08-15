@@ -14,8 +14,10 @@ const FollowList = ({
     headingtextsize,
     imgsize,
     imgurl,
-    name,address,
-
+    name,
+    address,
+    title,
+    member,
 }) => {
     function classNames(...args) {
         return args.filter(Boolean).join(" ");
@@ -29,7 +31,7 @@ const FollowList = ({
             )}
         >
             <div style={{ display: "flex", gap: ".2em" }}>
-                <div className="grid-item" style={{marginBottom:"5px"}}>
+                <div className="grid-item" style={{ marginBottom: "5px" }}>
                     <ProfileIcon
                         size={imgsize ? imgsize : "40px"}
                         bgColor="white"
@@ -40,8 +42,8 @@ const FollowList = ({
 
                 {heading ? (
                     <CommunityHeading
-                        title={"DEV COMMUNITY"}
-                        member={196}
+                        title={title}
+                        member={member}
                         fontsize={headingtextsize}
                     />
                 ) : (
@@ -49,7 +51,7 @@ const FollowList = ({
                         name={name}
                         address={address}
                         date={"27-jun-23"}
-                        middle= {middle}
+                        middle={middle}
                     />
                 )}
             </div>
@@ -75,18 +77,23 @@ const FollowList = ({
                             fontSize: "14px",
                             justifyContent: "center",
                             alignItems: "center",
+                            color: "red",
                         }}
                     >
+                        +
                         <span
                             style={{
-                                fontSize: "1.5rem",
+                                fontSize: ".5rem",
                                 paddingRight: ".5rem",
-                                color: "red",
+                                color: `${
+                                    ctx.isDark ? "rgb(218, 214, 214)" : "black"
+                                }`,
+
+                                marginLeft:"5px"
                             }}
                         >
-                            +
+                            {TypeofButton}
                         </span>
-                        {TypeofButton}
                     </span>
                 </button>
                 {middle && (

@@ -7,7 +7,7 @@ import Data from "../../assets/dummyData";
 const LeftSection = () => {
     console.log(Data.profileData);
     return (
-        <div className="leftsection">
+        <div className="leftsection" >
             <Card className="profile">
                 <Profile />
             </Card>

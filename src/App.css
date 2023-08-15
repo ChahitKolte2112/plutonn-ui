@@ -40,7 +40,8 @@
     flex: 2;
     background-color: green;
 
-    height: 88vh;
+    /* height: 88vh; */
+    border:"solid 2px black";
     margin-top: 8px;
     box-sizing: border-box;
 }

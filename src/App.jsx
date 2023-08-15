@@ -27,12 +27,13 @@ const App = () => {
                         "parent_div",
                         isDark && "parentdark_div"
                     )}
+                    style={{overflow:"hidden"}}
                 >
                     <Header />
                     <PartionLine />
 
                     <div className="section_div">
-                        <div className="leftsection">
+                        <div className="leftsection" >
                             <LeftSection />
                         </div>
                         <article className="middlesection">

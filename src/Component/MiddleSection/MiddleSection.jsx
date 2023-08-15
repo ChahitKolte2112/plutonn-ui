@@ -43,6 +43,7 @@ const MiddleSection = () => {
                 "middlesection",
                 ctx.isDark && "middlesectiondark"
             )}
+           
         >
             <FollowList
                 TypeofButton={"Join"}
@@ -87,7 +88,7 @@ const MiddleSection = () => {
             <div
                 style={{
                     overflow: "scroll",
-                    height: "64%",
+                    height:"80%",
                     padding: "10px",
                     marginTop: ".5rem ",
                     scroll :"smooth",
