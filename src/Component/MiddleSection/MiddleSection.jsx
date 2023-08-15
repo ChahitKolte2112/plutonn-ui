@@ -54,7 +54,7 @@ const MiddleSection = () => {
                 }}
             >
                 <Button
-                    type={"Join DSA Community"}
+                    type={"Join DSA MKC"}
                     textcolor={"white"}
                     backgroundcolor={"#f45046"}
                     w={"85%"}
