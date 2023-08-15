@@ -89,7 +89,7 @@ const FollowList = ({
                                     ctx.isDark ? "rgb(218, 214, 214)" : "black"
                                 }`,
 
-                                marginLeft:"5px"
+                                marginLeft: "5px",
                             }}
                         >
                             {TypeofButton}

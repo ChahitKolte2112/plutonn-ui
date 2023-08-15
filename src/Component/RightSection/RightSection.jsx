@@ -57,6 +57,7 @@ const RightSection = () => {
                     member={data.members}
                     title={data.name}
                     imgurl={data.imageurl}
+                    
                 />
             </div>))
             }

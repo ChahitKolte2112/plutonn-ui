@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useSyncExternalStore } from "react";
 import PropTypes from "prop-types";
-const CommunityHeading = ({ title, member, fontsize }) => {
+import { useContext } from "react";
+import ThemeContext from "./store/theme-context";
+const CommunityHeading = ({ title, member, fontsize, isDark }) => {
+    const ctx = useContext(ThemeContext);
     return (
         <div
             style={{
@@ -17,6 +20,7 @@ const CommunityHeading = ({ title, member, fontsize }) => {
                     margin: "-0px",
                     fontSize: fontsize,
                     fontWeight: 550,
+                    color: `${ctx.isDark ? "rgb(218, 214, 214)" : "black"}`,
                 }}
             >
                 {title}
@@ -25,7 +29,7 @@ const CommunityHeading = ({ title, member, fontsize }) => {
             <h3
                 style={{
                     margin: "-0px",
-                    color: "grey",
+                    color: `${ctx.isDark ? "rgb(218, 214, 214)" : "black"}`,
                     fontStyle: "normal",
                     fontWeight: 100,
                     fontSize: ".5em",
