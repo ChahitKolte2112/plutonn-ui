@@ -3,7 +3,9 @@ import "./LeftSection.css";
 import Card from "../../UI/Card";
 import Profile from "./Profile";
 import FollowList from "./FollowList";
+import Data from "../../assets/dummyData";
 const LeftSection = () => {
+    console.log(Data.profileData);
     return (
         <div className="leftsection">
             <Card className="profile">
@@ -33,53 +35,17 @@ const LeftSection = () => {
                 </li>
             </Card>
             <Card className="followsection">
-                <div style={{ marginTop: "1rem" }}>
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                    {" "}
-                    <FollowList TypeofButton={"Follow"} middle={false} />
-                </div>
+                {Data.profileData.map((profile) => (
+                    <div key={profile.id} style={{ marginTop: "1rem" }}>
+                        <FollowList
+                            TypeofButton={"Follow"}
+                            middle={false}
+                            name={profile.name}
+                            address={profile.address}
+                            imgurl={profile.imageurl}
+                        />
+                    </div>
+                ))}
             </Card>
         </div>
     );

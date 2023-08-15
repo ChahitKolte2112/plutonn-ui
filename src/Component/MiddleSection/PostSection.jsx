@@ -17,7 +17,15 @@ const PostSection = ({ str, image }) => {
                 boxSizing: "border-box",
             }}
         >
-            <FollowList middle={true} TypeofButton={"Follow"} />
+            <FollowList
+                middle={true}
+                TypeofButton={"Follow"}
+                imgurl={
+                    "https://d3gmywgj71m21w.cloudfront.net/6246d136788ca0e1226cb06335fb77bd.jpg"
+                }
+                name={"Nitesh Kumar"}
+                address={" @i_m_nitesh9"}
+            />
             <TextArea str={str} />
             {image && <MiddleImage image={image} />}
 
@@ -29,12 +37,11 @@ const PostSection = ({ str, image }) => {
 };
 PostSection.propTypes = {
     image: PropTypes.string,
-   str:PropTypes.string.isRequired,
-   
+    str: PropTypes.string.isRequired,
 };
 
 PostSection.defaultProps = {
-   image:"",
-   str:"Waiting for the Content"
+    image: "",
+    str: "Waiting for the Content",
 };
 export default PostSection;

@@ -14,6 +14,8 @@ const FollowList = ({
     headingtextsize,
     imgsize,
     imgurl,
+    name,address,
+
 }) => {
     function classNames(...args) {
         return args.filter(Boolean).join(" ");
@@ -27,7 +29,7 @@ const FollowList = ({
             )}
         >
             <div style={{ display: "flex", gap: ".2em" }}>
-                <div className="grid-item">
+                <div className="grid-item" style={{marginBottom:"5px"}}>
                     <ProfileIcon
                         size={imgsize ? imgsize : "40px"}
                         bgColor="white"
@@ -44,8 +46,8 @@ const FollowList = ({
                     />
                 ) : (
                     <PosterDetails
-                        name={"Chahit Kumar"}
-                        address={"@chahit..."}
+                        name={name}
+                        address={address}
                         date={"27-jun-23"}
                         middle= {middle}
                     />

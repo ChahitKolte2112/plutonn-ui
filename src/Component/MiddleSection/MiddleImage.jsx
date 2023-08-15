@@ -8,7 +8,9 @@ const MiddleImage = ({image}) => {
                 style={{
                     width: "90%",
                     height: "300px",
-                    object: "content-fit",
+                    objectFit: "content-fit",
+                    borderRadius:"20px",
+                    // border:"2px"
                 }}
                 src={image}
             />
