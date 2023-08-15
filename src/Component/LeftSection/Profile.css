@@ -1,0 +1,52 @@
+.profile_img {
+    transform: rotate(90deg);
+    z-index: 20px;
+    width: 80%;
+    height: 80%;
+}
+.profile {
+    position: relative;
+    height: auto;
+    margin-top: 45px;
+    text-align: center;
+    margin-right: 5%;
+}
+.image {
+   width: 110px;
+   height: 110px;
+   position: relative;
+}
+.profileinner_img {
+    position: absolute;
+    top: 0.4rem;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+}
+.button {
+    width: 100%;
+    display: flex;
+    margin-bottom: -25px;
+    justify-content: center;
+    
+}
+.description {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 2rem;
+}
+.login_button {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background-color: rgb(244, 80, 70);
+    border-radius: 12px;
+    display: flex;
+    gap:10px;
+    justify-content: space-between;
+    padding: 0px 20px;
+    
+}

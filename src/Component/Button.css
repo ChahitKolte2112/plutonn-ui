@@ -1,0 +1,15 @@
+.middle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    width: 49%;
+
+    border: 0px;
+
+    background-color: transparent;
+}
+
+.middle-button:hover {
+    background-color: rgb(238, 234, 234);
+}

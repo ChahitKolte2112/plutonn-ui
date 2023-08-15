@@ -1,0 +1,11 @@
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:transparent;
+    padding: 0px;
+}
+
+.profile-icon img {
+    object-fit: cover;
+}

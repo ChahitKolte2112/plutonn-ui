@@ -1,0 +1,12 @@
+.middle-img {
+    width: 98%;
+    height: auto;
+
+    overflow: hidden;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+}

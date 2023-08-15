@@ -1,0 +1,50 @@
+/* Styling for the comment bar and buttons */
+.comment-bar {
+    display: flex;
+    align-items: center;
+}
+
+.comment-button,
+.reaction-button,
+.share-button {
+    padding-right: 12px;
+    padding-left: 4px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+/* Styling for the profile icon */
+.profile-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0px;
+}
+
+.profile-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.post-comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.post-comment-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
