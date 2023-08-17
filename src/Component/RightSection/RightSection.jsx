@@ -21,7 +21,6 @@ const RightSection = () => {
                     marginLeft: ".3rem",
                     marginBottom: ".5rem",
                     marginTop: ".5rem",
-                   
                 }}
             >
                 <input
@@ -29,8 +28,8 @@ const RightSection = () => {
                         width: "90%",
                         border: " 0px white",
                         outline: "none",
-                        backgroundColor:`${ctx?.isDark ? "transparent":""}`,
-                        color:`${ctx?.isDark ? "rgb(218, 214, 214)":""}`
+                        backgroundColor: `${ctx?.isDark ? "transparent" : ""}`,
+                        color: `${ctx?.isDark ? "rgb(218, 214, 214)" : ""}`,
                     }}
                     className="search-input"
                     type="text"
@@ -39,7 +38,10 @@ const RightSection = () => {
                     onChange={(e) => setSearchText(e.target.value)}
                 />
                 <button className="post-comment-button">
-                    <i class="ri-search-line" style={{color:"#f45046",fontSize:"25px"}}></i>
+                    <i
+                        class="ri-search-line"
+                        style={{ color: "#f45046", fontSize: "25px" }}
+                    ></i>
                 </button>
             </div>
             <h3
@@ -49,19 +51,18 @@ const RightSection = () => {
             >
                 Popular Community
             </h3>
-            {Data.communityData.map((data)=>(<div style={{ marginTop: "1em" }}>
-                <FollowList
-                    heading={true}
-                    TypeofButton={"JOIN"}
-                    headingtextsize={"12px"}
-                    member={data.members}
-                    title={data.name}
-                    imgurl={data.imageurl}
-                    
-                />
-            </div>))
-            }
-           
+            {Data.communityData.map((data) => (
+                <div style={{ marginTop: "1em" }}>
+                    <FollowList
+                        heading={true}
+                        TypeofButton={"JOIN"}
+                        headingtextsize={"12px"}
+                        member={data.members}
+                        title={data.name}
+                        imgurl={data.imageurl}
+                    />
+                </div>
+            ))}
         </div>
     );
 };

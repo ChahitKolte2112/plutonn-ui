@@ -32,7 +32,7 @@ const CommunityHeading = ({ title, member, fontsize, isDark }) => {
                     color: `${ctx.isDark ? "rgb(218, 214, 214)" : "black"}`,
                     fontStyle: "normal",
                     fontWeight: 100,
-                    fontSize: ".5em",
+                    fontSize: "16px",
                 }}
             >
                 {member} Member

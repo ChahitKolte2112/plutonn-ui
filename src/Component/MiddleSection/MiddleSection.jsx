@@ -53,6 +53,7 @@ const MiddleSection = () => {
                     "https://d3gmywgj71m21w.cloudfront.net/3b2976ba93bbe9d96b4ed00a4966bd87"
                 }
                 imgsize={"60px"}
+                headingtextsize={"20px"}
             />
             <PartionLine size={"98%"} />
             <div
