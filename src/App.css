@@ -33,13 +33,12 @@
     flex: 1;
 
     height: 90vh;
+    min-width: 300px;
 }
 
 .middlesection {
     flex: 2;
-    background-color: green;
 
-    border: "solid 2px black";
     margin-top: 8px;
     box-sizing: border-box;
 }
@@ -53,12 +52,16 @@
     .rightsection {
         display: none;
     }
+    .leftsection {
+        min-width: 250px;
+    }
 }
 
 /* Mobile view */
 @media (max-width: 560px) {
     .leftsection {
         display: none;
+        min-width: 0px;
     }
 
     .middlesection {
@@ -69,4 +72,5 @@
     .rightsection {
         display: none;
     }
+
 }

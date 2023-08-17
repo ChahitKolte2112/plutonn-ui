@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ProfileIcon from "../ProfileIcon";
 import "./CommentSection.css";
 import { Tooltip } from "react-tooltip";
@@ -8,21 +8,19 @@ import profileuser from "../../assets/profileuser.png";
 import Card from "../../UI/Card";
 // import sendicon from "../../assests/sendicon.svg";
 import "react-tooltip/dist/react-tooltip.css";
+import ThemeContext from "../store/theme-context";
 const CommentSection = () => {
+    const ctx = useContext(ThemeContext);
     const [commentText, setCommentText] = useState("");
     const [comments, setComments] = useState(false);
 
-    const handleLikeClick = () => {
-        // Code to handle liking a post
-    };
+    const handleLikeClick = () => {};
 
     const handleCommentClick = () => {
         setComments((prev) => {
             return !prev;
         });
     };
-
-    const handleShareClick = () => {};
 
     const handlePostComment = () => {
         if (commentText.trim() !== "") {
@@ -39,19 +37,37 @@ const CommentSection = () => {
                         className="comment-button"
                         onClick={handleCommentClick}
                     >
-                        <i class="ri-chat-3-line"></i>
+                        <i
+                            class="ri-chat-3-line"
+                            style={{
+                                color: `${ctx.isDark ? "white" : "black"}`,
+                                fontSize: "24px",
+                            }}
+                        ></i>
                     </button>
                     <button
                         className="reaction-button"
                         onClick={handleLikeClick}
                     >
-                        <i class="ri-thumb-up-fill"></i>
+                        <i
+                            class="ri-thumb-up-fill"
+                            style={{
+                                color: `${ctx.isDark ? "white" : "black"}`,
+                                fontSize: "24px",
+                            }}
+                        ></i>
                     </button>
                     <a
                         data-tooltip-id="my-tooltip"
                         data-tooltip-delay-hide={500}
                     >
-                        <i class="ri-share-fill"></i>
+                        <i
+                            class="ri-share-fill"
+                            style={{
+                                color: `${ctx.isDark ? "white" : "black"}`,
+                                fontSize: "24px",
+                            }}
+                        ></i>
                     </a>
                     <Tooltip
                         id="my-tooltip"
@@ -59,22 +75,51 @@ const CommentSection = () => {
                             background: "white",
                             paddingRight: "40px",
                             paddingLeft: "0px",
-                            // border: "2px solid black",
+
                             borderRadius: "10px",
                         }}
                     >
                         <ul style={{ listStyleType: "none" }}>
-                            <li style={{ padding: "7px", color: "black" }}>
-                                <href>Whatsapp</href>
+                            <li className="reaction-bar">
+                                <i
+                                    class="ri-whatsapp-fill"
+                                    style={{
+                                        fontSize: "20px",
+                                    }}
+                                >
+                                    <href rel="">Whatsapp</href>
+                                </i>
                             </li>
-                            <li style={{ padding: "7px", color: "black" }}>
-                                <href>Facebook</href>
+                            <li className="reaction-bar">
+                                <i
+                                    class="ri-facebook-fill"
+                                    style={{
+                                        fontSize: "20px",
+                                    }}
+                                >
+                                    <href>Facebook</href>
+                                </i>
                             </li>
-                            <li style={{ padding: "7px", color: "black" }}>
-                                <href>Instagram</href>
+                            <li className="reaction-bar">
+                                <i
+                                    class="ri-instagram-fill"
+                                    style={{
+                                        fontSize: "20px",
+                                    }}
+                                >
+                                    {" "}
+                                    <href>Instagram</href>
+                                </i>
                             </li>
-                            <li style={{ padding: "7px", color: "black" }}>
-                                <href>Twitter</href>
+                            <li className="reaction-bar">
+                                <i
+                                    class="ri-twitter-fill"
+                                    style={{
+                                        fontSize: "20px",
+                                    }}
+                                >
+                                    <href>Twitter</href>
+                                </i>
                             </li>
                         </ul>
                     </Tooltip>
@@ -133,7 +178,13 @@ const CommentSection = () => {
                             className="post-comment-button"
                             onClick={handlePostComment}
                         >
-                            post
+                            <i
+                                class="ri-telegram-line"
+                                style={{
+                                    color: `${ctx.isDark ? "white" : "black"}`,
+                                    fontSize: "30px",
+                                }}
+                            ></i>
                         </button>
                     </div>
                 </div>

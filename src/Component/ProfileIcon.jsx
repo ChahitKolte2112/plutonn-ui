@@ -7,7 +7,7 @@ const ProfileIcon = ({ size, bgColor, imageUrl, altText }) => {
     const iconStyle = {
         width: size,
         height: size,
-        backgroundColor: "green",
+        backgroundColor: "white",
     };
     const ctx = useContext(ThemeContext);
     return (
@@ -19,6 +19,7 @@ const ProfileIcon = ({ size, bgColor, imageUrl, altText }) => {
 
                     borderRadius: "50%",
                     margin: "0px",
+                    border:"1px solid grey"
                 }}
                 src={imageUrl}
                 alt={altText}

@@ -30,7 +30,7 @@ const FollowList = ({
                 ctx.isDark && "follow-listdark"
             )}
         >
-            <div style={{ display: "flex", gap: ".2em" }}>
+            <div style={{ display: "flex", gap: "20px" }}>
                 <div className="grid-item" style={{ marginBottom: "5px" }}>
                     <ProfileIcon
                         size={imgsize ? imgsize : "40px"}
@@ -58,10 +58,11 @@ const FollowList = ({
             <div
                 style={{
                     display: "flex",
-                    gap: ".1rem",
+                    gap: ".5rem",
                     justifyContent: "end",
                     alignItems: "center",
                     paddingRight: "2rem",
+                    // border:"2px solid green"
                 }}
             >
                 <button
@@ -74,7 +75,7 @@ const FollowList = ({
                     <span
                         style={{
                             display: "flex",
-                            fontSize: "14px",
+                            fontSize: "16px",
                             justifyContent: "center",
                             alignItems: "center",
                             color: "red",
@@ -83,8 +84,9 @@ const FollowList = ({
                         +
                         <span
                             style={{
-                                fontSize: ".5rem",
+                                fontSize: "1rem",
                                 paddingRight: ".5rem",
+
                                 color: `${
                                     ctx.isDark ? "rgb(218, 214, 214)" : "black"
                                 }`,
