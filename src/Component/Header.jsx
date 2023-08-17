@@ -32,7 +32,7 @@ const Header = () => {
                     Plutonn
                 </h2>
             </div>
-            <div>
+            <div className="header-title">
                 <h2>Community-Posts</h2>
             </div>
             <div>
