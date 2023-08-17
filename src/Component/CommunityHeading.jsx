@@ -29,7 +29,7 @@ const CommunityHeading = ({ title, member, fontsize, isDark }) => {
             <h3
                 style={{
                     margin: "-0px",
-                    color: `${ctx.isDark ? "rgb(218, 214, 214)" : "black"}`,
+                    color: `${ctx.isDark ? "rgb(218, 214, 214)" : "grey"}`,
                     fontStyle: "normal",
                     fontWeight: 100,
                     fontSize: "16px",

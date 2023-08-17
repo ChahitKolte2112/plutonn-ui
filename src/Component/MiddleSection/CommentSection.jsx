@@ -160,6 +160,7 @@ const CommentSection = () => {
                             marginLeft: ".3rem",
                             marginBottom: ".5rem",
                             marginTop: ".5rem",
+                            paddingLeft: "10px",
                         }}
                     >
                         <input
